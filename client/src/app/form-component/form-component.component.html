@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Name Registration Form</h2>
+    <form #userinput="ngForm" (ngSubmit)="submit(userinput.value)">
+        <div class="form-group">
+            <label for="name">Name</label><br/>
+            <br/>
+            <input type="text" name="name" class="form-control" ngModel>
+             <br/>
+            <!-- <label for="name">Body</label><br/>
+            <br/>
+            <textarea type="text" name="body" class="form-control" ngModel></textarea>
+            <input type="hidden" name="userId" value="1" class="form-control" ngModel> -->
+        </div>
+        <br/>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br/>
+    <h2>Hey there, <span>{{post?.name}}</span></h2>
+    <button (click)="viewMessage()">View Personal Message</button>
+</div>
